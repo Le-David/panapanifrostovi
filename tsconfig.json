@@ -3,6 +3,7 @@
     "remix.env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "./declaration.d.ts"
   ],
   "compilerOptions": {
     "lib": [
