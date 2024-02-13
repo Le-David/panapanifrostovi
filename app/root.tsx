@@ -18,8 +18,18 @@ export const meta: MetaFunction = () => [
 	},
 ]
 
+import globalStyles from "./styles/global.css"
+
 export const links: LinksFunction = () => [
-	...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+	...(cssBundleHref
+		? [
+				{ rel: "stylesheet", href: cssBundleHref },
+				{
+					rel: "stylesheet",
+					href: globalStyles,
+				},
+		  ]
+		: []),
 ]
 
 export default function App() {
