@@ -1,3 +1,4 @@
+import { Form } from "~/components/Form"
 import { Hero } from "~/components/Hero"
 
 export function headers({
@@ -21,6 +22,7 @@ export default function Index() {
 	return (
 		<main style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
 			<Hero />
+			<Form />
 		</main>
 	)
 }
