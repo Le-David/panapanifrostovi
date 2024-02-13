@@ -1,5 +1,3 @@
-import { useLoaderData } from "@remix-run/react"
-import { supabase } from "utils/supabase"
 import { Hero } from "~/components/Hero"
 
 export function headers({
@@ -19,17 +17,9 @@ export function headers({
 	}
 }
 
-export const loader = async () => {
-	const { data } = await supabase.from("test").select()
-
-	return { data }
-}
-
 export default function Index() {
-	const { data } = useLoaderData<typeof loader>()
 	return (
 		<main style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-			<pre>{JSON.stringify(data, null, 2)}</pre>
 			<Hero />
 		</main>
 	)
