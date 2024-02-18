@@ -70,3 +70,13 @@ netlify deploy --build
 # production deployment
 netlify deploy --build --prod
 ```
+
+# Supabase
+
+The database used for this project.
+
+## generate schema
+
+Don't forget to add **SUPABASE_PROJECT_ID** to the **.env**
+
+to create schema: `tsx utils/generate-schema.ts`
