@@ -1,3 +1,4 @@
+import { Form as FormComponent } from "@remix-run/react"
 import type { FunctionComponent } from "react"
 import styles from "./Form.module.css"
 
@@ -5,7 +6,7 @@ import styles from "./Form.module.css"
 
 export const Form: FunctionComponent = () => {
 	return (
-		<form className={styles.wrapper}>
+		<FormComponent className={styles.wrapper} method="post">
 			<h2>Uvidíme vás na naší veselce?</h2>
 			<div className={styles.group}>
 				<label className={styles.label}>
@@ -30,12 +31,12 @@ export const Form: FunctionComponent = () => {
 				</label>
 			</div>
 			<label className={styles.label}>
-				<div className={styles.labelText}>E-mail:</div>
+				<div className={styles.labelText}>Mobil:</div>
 				<input
 					className={styles.input}
-					type="email"
-					name="email"
-					autoComplete="email"
+					type="tel"
+					name="telephone"
+					autoComplete="tel"
 					required
 				/>
 			</label>
@@ -78,6 +79,6 @@ export const Form: FunctionComponent = () => {
 			<button className={styles.submit} type="submit">
 				Odeslat
 			</button>
-		</form>
+		</FormComponent>
 	)
 }
