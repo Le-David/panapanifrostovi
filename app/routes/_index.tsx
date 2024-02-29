@@ -1,5 +1,6 @@
 import { ActionFunctionArgs } from "@remix-run/node"
 import { supabase } from "utils/supabase"
+import { Ceremony } from "~/components/Ceremony"
 import { Form } from "~/components/Form"
 import { Hero } from "~/components/Hero"
 import { OurStory } from "~/components/OurStory"
@@ -51,6 +52,9 @@ export default function Index() {
 			<Hero />
 			<section className={styles.section}>
 				<OurStory />
+			</section>
+			<section className={styles.section}>
+				<Ceremony />
 			</section>
 			<section className={styles.section}>
 				<Form />
