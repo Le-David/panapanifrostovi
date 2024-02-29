@@ -3,7 +3,7 @@ import type { FunctionComponent } from "react"
 import styles from "./Image.module.css"
 
 export type ImageProps = CommonImageProps &
-	(GoogleDriveImageProps | { isGoogleDrive: false; url: string })
+	(GoogleDriveImageProps | UrlImageProps)
 
 type CommonImageProps = {
 	className?: string
@@ -11,6 +11,11 @@ type CommonImageProps = {
 	width: number
 	height: number
 	alt?: string
+}
+
+type UrlImageProps = {
+	isGoogleDrive?: false
+	url: string
 }
 
 type GoogleDriveImageProps = {
@@ -29,11 +34,14 @@ export const Image: FunctionComponent<ImageProps> = ({
 }) => {
 	let url = ""
 
-	if (otherProps.isGoogleDrive === true) {
+	if (
+		otherProps.isGoogleDrive === false ||
+		otherProps.isGoogleDrive === undefined
+	) {
+		url = otherProps.url
+	} else if (otherProps.isGoogleDrive === true) {
 		const size = `w${width}`
 		url = `https://drive.google.com/thumbnail?id=${otherProps.imageId}&sz=${size}`
-	} else {
-		url = otherProps.url
 	}
 	return (
 		<div
