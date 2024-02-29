@@ -1,0 +1,16 @@
+@use 'common'
+
+.wrapper
+	--Container-width: 100%
+	--Container-gap: var(--edge-gap)
+
+	max-width: calc(var(--Container-width) + (var(--Container-gap) * 2))
+	margin: 0 auto
+	padding-inline: var(--Container-gap)
+	width: 100%
+
+	&.is_size_default
+		--Container-width: var(--common-container-size-default)
+
+	&.is_size_full
+		//

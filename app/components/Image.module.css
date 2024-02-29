@@ -1,1 +1,1 @@
-.wrapper{max-width:100%;height:auto}/*# sourceMappingURL=Image.module.css.map */
+.image:not(.is_fill){max-width:calc(var(--Image-width)*1px);height:auto}.image.is_fill{position:absolute;width:100%;height:100%;left:0;top:0;z-index:0}/*# sourceMappingURL=Image.module.css.map */

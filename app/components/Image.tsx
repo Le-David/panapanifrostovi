@@ -1,12 +1,13 @@
+import clsx from "clsx"
 import type { FunctionComponent } from "react"
 import styles from "./Image.module.css"
 
-export type ImageProps = CommonImageProps & {} & (
-		| GoogleDriveImageProps
-		| { isGoogleDrive: false; url: string }
-	)
+export type ImageProps = CommonImageProps &
+	(GoogleDriveImageProps | { isGoogleDrive: false; url: string })
 
 type CommonImageProps = {
+	className?: string
+	fill?: boolean
 	width: number
 	height: number
 	alt?: string
@@ -20,12 +21,14 @@ type GoogleDriveImageProps = {
 /** If image is from google drive it must be set the permission to be visible by all
  * (or at least viewable by the website) */
 export const Image: FunctionComponent<ImageProps> = ({
+	alt = "",
 	width,
 	height,
-	alt = "",
+	className,
 	...otherProps
 }) => {
 	let url = ""
+
 	if (otherProps.isGoogleDrive === true) {
 		const size = `w${width}`
 		url = `https://drive.google.com/thumbnail?id=${otherProps.imageId}&sz=${size}`
@@ -33,12 +36,23 @@ export const Image: FunctionComponent<ImageProps> = ({
 		url = otherProps.url
 	}
 	return (
-		<img
+		<div
 			className={styles.wrapper}
-			src={url}
-			width={width}
-			height={height}
-			alt={alt}
-		/>
+			style={{
+				"--Image-width": width,
+			}}
+		>
+			<img
+				className={clsx(
+					styles.image,
+					otherProps.fill && styles.is_fill,
+					className
+				)}
+				src={url}
+				width={width}
+				height={height}
+				alt={alt}
+			/>
+		</div>
 	)
 }
