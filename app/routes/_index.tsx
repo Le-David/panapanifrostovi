@@ -2,6 +2,8 @@ import { ActionFunctionArgs } from "@remix-run/node"
 import { supabase } from "utils/supabase"
 import { Form } from "~/components/Form"
 import { Hero } from "~/components/Hero"
+import { OurStory } from "~/components/OurStory"
+import styles from "../styles/routes/Home.module.css"
 
 export function headers({
 	loaderHeaders,
@@ -42,9 +44,17 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 
 export default function Index() {
 	return (
-		<main style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
+		<main
+			className={styles.wrapper}
+			style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}
+		>
 			<Hero />
-			<Form />
+			<section className={styles.section}>
+				<OurStory />
+			</section>
+			<section className={styles.section}>
+				<Form />
+			</section>
 		</main>
 	)
 }

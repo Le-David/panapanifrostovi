@@ -1,0 +1,41 @@
+@use 'common'
+
+.wrapper
+	background-color: common.$color-main
+	padding-block: 5rem
+
+.main
+	//
+
+.content
+	display: flex
+	flex-direction: column
+	justify-content: center
+
+.title
+	margin-top: unset
+	text-align: center
+
+.text
+	max-width: 37.5rem
+	margin-inline: auto
+	margin-block: 0
+
+.images
+	display: grid
+	gap: 2.5rem
+	margin-top: 2.5rem
+
+	@media (min-width: 48rem)
+		grid-template-columns: 1fr 1fr 1fr
+
+.image
+	position: relative
+	z-index: 0
+	aspect-ratio: 300 / 400
+	width: 100%
+	border-radius: 0.625rem
+	overflow: hidden
+
+	&In
+		object-fit: cover
