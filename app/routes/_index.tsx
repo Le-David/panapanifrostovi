@@ -1,7 +1,9 @@
 import { ActionFunctionArgs } from "@remix-run/node"
+import clsx from "clsx"
 import { supabase } from "utils/supabase"
 import { BarnImage } from "~/components/BarnImage"
 import { Ceremony } from "~/components/Ceremony"
+import { Container } from "~/components/Container"
 import { Form } from "~/components/Form"
 import { Hero } from "~/components/Hero"
 import { OurStory } from "~/components/OurStory"
@@ -59,6 +61,14 @@ export default function Index() {
 			</section>
 			<section className={styles.section}>
 				<BarnImage />
+			</section>
+			<section className={clsx(styles.section, styles.info)}>
+				<Container>
+					<p className={styles.infoText}>Obřad proběhne ve 12:30 hodin</p>
+					<p className={styles.infoText}>
+						Prosíme o příjezd svatebčanů zhruba mezi 11:30 - 12:00
+					</p>
+				</Container>
 			</section>
 			<section className={styles.section}>
 				<Form />
