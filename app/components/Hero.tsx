@@ -2,14 +2,13 @@ import type { FunctionComponent } from "react"
 import { Image } from "~/components/Image"
 import styles from "./Hero.module.css"
 
-export type HeroProps = {}
-
-export const Hero: FunctionComponent<HeroProps> = ({}) => {
+export const Hero: FunctionComponent = () => {
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.is_desktop}>
 				<div className={styles.initial}>K</div>
 				<Image
+					className={styles.image}
 					isGoogleDrive
 					imageId="1sDjdEE6ZG1_MC5_SVcEYBijguncgf0Tz"
 					width={480}
@@ -20,6 +19,7 @@ export const Hero: FunctionComponent<HeroProps> = ({}) => {
 			</div>
 			<div className={styles.is_mobile}>
 				<Image
+					className={styles.image}
 					isGoogleDrive
 					imageId="1sDjdEE6ZG1_MC5_SVcEYBijguncgf0Tz"
 					width={480}
