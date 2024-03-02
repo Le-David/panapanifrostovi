@@ -1,0 +1,31 @@
+@use 'common'
+
+.wrapper
+	padding-block: common.$insideBlockSpacing
+
+.title
+	text-align: center
+	margin-block: 0 1.875rem
+
+.schedule
+	text-align: center
+
+	&Item
+		&:not(:first-child)
+			margin-top: 5rem
+
+		&Title
+			margin-block: 0 1rem
+
+		&Description
+			margin-block: 0
+
+		&Icon
+			margin-bottom: 0.625rem
+			&In
+				width: 3.125rem
+				height: 3.125rem
+
+.iconSvg
+	&Dance
+		fill: #000002

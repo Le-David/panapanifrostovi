@@ -7,6 +7,7 @@ import { Container } from "~/components/Container"
 import { Form } from "~/components/Form"
 import { Hero } from "~/components/Hero"
 import { OurStory } from "~/components/OurStory"
+import { Schedule } from "~/components/Schedule"
 import styles from "../styles/routes/Home.module.css"
 
 export function headers({
@@ -69,6 +70,9 @@ export default function Index() {
 						Prosíme o příjezd svatebčanů zhruba mezi 11:30 - 12:00
 					</p>
 				</Container>
+			</section>
+			<section className={clsx(styles.section, styles.is_schedule)}>
+				<Schedule />
 			</section>
 			<section className={styles.section}>
 				<Form />
