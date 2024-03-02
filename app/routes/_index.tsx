@@ -4,6 +4,7 @@ import { supabase } from "utils/supabase"
 import { BarnImage } from "~/components/BarnImage"
 import { Ceremony } from "~/components/Ceremony"
 import { Container } from "~/components/Container"
+import { Dresscode } from "~/components/Dresscode"
 import { Form } from "~/components/Form"
 import { Hero } from "~/components/Hero"
 import { OurStory } from "~/components/OurStory"
@@ -81,6 +82,9 @@ export default function Index() {
 			</section>
 			<section className={clsx(styles.section, styles.is_parking)}>
 				<Parking />
+			</section>
+			<section className={clsx(styles.section, styles.is_dresscode)}>
+				<Dresscode />
 			</section>
 			<section className={styles.section}>
 				<Form />
