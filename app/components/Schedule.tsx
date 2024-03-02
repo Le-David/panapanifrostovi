@@ -3,6 +3,7 @@ import { Container } from "./Container"
 import styles from "./Schedule.module.css"
 
 export const Schedule: FunctionComponent = () => {
+	// @TODO: fade in one item by one
 	return (
 		<div className={styles.wrapper}>
 			<Container>

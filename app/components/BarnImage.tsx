@@ -3,6 +3,8 @@ import styles from "./BarnImage.module.css"
 import { Image } from "./Image"
 
 export const BarnImage: FunctionComponent = () => {
+	// @TODO: add more images than just one
+	// @TODO: parallax effect
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.is_desktop}>

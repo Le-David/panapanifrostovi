@@ -7,6 +7,7 @@ import { Container } from "~/components/Container"
 import { Form } from "~/components/Form"
 import { Hero } from "~/components/Hero"
 import { OurStory } from "~/components/OurStory"
+import { Parking } from "~/components/Parking"
 import { Schedule } from "~/components/Schedule"
 import styles from "../styles/routes/Home.module.css"
 
@@ -74,6 +75,12 @@ export default function Index() {
 			</section>
 			<section className={clsx(styles.section, styles.is_schedule)}>
 				<Schedule />
+			</section>
+			<section className={styles.section}>
+				<BarnImage />
+			</section>
+			<section className={clsx(styles.section, styles.is_parking)}>
+				<Parking />
 			</section>
 			<section className={styles.section}>
 				<Form />
