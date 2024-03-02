@@ -54,7 +54,7 @@ export default function Index() {
 			style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}
 		>
 			<Hero />
-			<section className={styles.section}>
+			<section className={clsx(styles.section, styles.is_story)}>
 				<OurStory />
 			</section>
 			<section className={styles.section}>
@@ -63,7 +63,7 @@ export default function Index() {
 			<section className={styles.section}>
 				<BarnImage />
 			</section>
-			<section className={clsx(styles.section, styles.info)}>
+			<section className={clsx(styles.section, styles.is_info)}>
 				<Container>
 					<p className={styles.infoText}>Obřad proběhne ve 12:30 hodin</p>
 					<p className={styles.infoText}>

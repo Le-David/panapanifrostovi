@@ -1,1 +1,1 @@
-.section{padding-top:var(--common-spacing)}.section .infoText{text-align:center;font-size:1.375rem;margin-bottom:0}@media(min-width: 48rem){.section .infoText{font-size:2.25rem}}/*# sourceMappingURL=Home.module.css.map */
+.section:not(.is_schedule,.is_story){padding-top:var(--common-spacing)}.section.is_info{background-color:#e3ceaf;padding-block:5rem}.section .infoText{text-align:center;font-size:3.125rem;margin-bottom:0}.section .infoText:first-child{margin-top:0}@media(min-width: 48rem){.section .infoText{font-size:2.25rem}}/*# sourceMappingURL=Home.module.css.map */
