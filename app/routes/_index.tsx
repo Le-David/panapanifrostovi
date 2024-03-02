@@ -6,6 +6,7 @@ import { Ceremony } from "~/components/Ceremony"
 import { Container } from "~/components/Container"
 import { Dresscode } from "~/components/Dresscode"
 import { Form } from "~/components/Form"
+import { Gift } from "~/components/Gift"
 import { Hero } from "~/components/Hero"
 import { OurStory } from "~/components/OurStory"
 import { Parking } from "~/components/Parking"
@@ -85,6 +86,9 @@ export default function Index() {
 			</section>
 			<section className={clsx(styles.section, styles.is_dresscode)}>
 				<Dresscode />
+			</section>
+			<section className={clsx(styles.section, styles.is_gift)}>
+				<Gift />
 			</section>
 			<section className={styles.section}>
 				<Form />
