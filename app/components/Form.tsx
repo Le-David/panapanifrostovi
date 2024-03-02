@@ -7,7 +7,10 @@ import styles from "./Form.module.css"
 export const Form: FunctionComponent = () => {
 	return (
 		<FormComponent className={styles.wrapper} method="post">
-			<h2>Uvidíme vás na naší veselce?</h2>
+			<h2>
+				A to nejdulezitejsi na konec? Muzeme s tebou/s vámi na 100% pocitat?
+			</h2>
+			<h3>Prosime o potvrzeni ucasti a to do 30.6.2024.</h3>
 			<div className={styles.group}>
 				<label className={styles.label}>
 					<div className={styles.labelText}>Křestní jméno:</div>
