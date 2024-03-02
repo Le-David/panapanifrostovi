@@ -67,7 +67,8 @@ export default function Index() {
 				<Container>
 					<p className={styles.infoText}>Obřad proběhne ve 12:30 hodin</p>
 					<p className={styles.infoText}>
-						Prosíme o příjezd svatebčanů zhruba mezi 11:30 - 12:00
+						Prosíme o příjezd svatebčanů zhruba mezi <br />
+						11:30 - 12:00
 					</p>
 				</Container>
 			</section>
