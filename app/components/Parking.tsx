@@ -13,19 +13,24 @@ export const Parking: FunctionComponent = () => {
 						className={styles.imageIn}
 						isGoogleDrive
 						imageId="1VgSXD0pUD9s90LcAEgvXKurNlbrXHeno"
-						width={600}
-						height={345}
+						width={300}
+						height={172}
 						// fill
 						alt="Mini Van"
 					/>
 				</div>
 				<p className={styles.text}>
-					Zaparkovat lze primo u stodoly, pres den nebude potreba nikam
-					prejizdet, cely den budeme travit na tomto miste. Ubytovani z
-					kapacitnich duvodu dokazeme nabidnout pouze nejblizsi rodine, proto
-					prosime o pochopeni a prizpusobeni se teto situaci. Viuzit lze
-					napriklad holety v nedaleke Lenore, nebo stany, karavany ci spani pod
-					sirakem nechame ciste na vas :)
+					Zaparkovat lze přímo u stodoly, přes den nebude potřeba nikam
+					přejíždět, jelikož celý den budeme oslavovat na jednom místě.
+				</p>
+				<p className={styles.text}>
+					Ubytování z kapacitních důvodu dokážeme nabídnout pouze nejbližší
+					rodině, proto prosíme o pochopení a přizpůsobeni se této situaci.
+				</p>
+				<p className={styles.text}>
+					Využít lze například ubytovací zařízení v nedaleké Lenoře, případně
+					můžete u stodoly rozložit stany, zaparkovat karavany nebo si užít
+					spaní pod širákem - necháme na vás :)
 				</p>
 			</Container>
 		</div>

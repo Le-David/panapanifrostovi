@@ -1,1 +1,1 @@
-.wrapper{padding-block:5rem}.image{display:flex;justify-content:center;margin-bottom:3.125rem}.text{max-width:37.5rem;margin:0 auto}/*# sourceMappingURL=Parking.module.css.map */
+.wrapper{padding-block:5rem}.image{display:flex;justify-content:center;margin-bottom:3.125rem}.text{max-width:37.5rem;margin-inline:auto;margin-bottom:0}.text:not(:first-child){margin-top:1.25rem}/*# sourceMappingURL=Parking.module.css.map */
