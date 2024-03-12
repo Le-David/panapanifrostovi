@@ -13,7 +13,7 @@ export const Parking: FunctionComponent = () => {
 					<Image
 						className={styles.imageIn}
 						isGoogleDrive
-						imageId="1VgSXD0pUD9s90LcAEgvXKurNlbrXHeno"
+						imageId="1ANnI-fq-I8g9tHvh0swjQOfhJkyIkaFf"
 						width={300}
 						height={172}
 						// fill
