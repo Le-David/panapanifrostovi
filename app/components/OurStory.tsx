@@ -9,10 +9,7 @@ export const OurStory: FunctionComponent = () => {
 			<Container>
 				<div className={styles.main}>
 					<div className={styles.content}>
-						<h2 className={styles.title}>Jak jsme se poznali</h2>
-						<p className={styles.text}>
-							Začalo to jednou takhle před několika lety...
-						</p>
+						<h2 className={styles.title}>Kristýna a David</h2>
 					</div>
 					<div className={styles.images}>
 						<div className={styles.image}>
