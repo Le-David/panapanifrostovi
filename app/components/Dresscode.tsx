@@ -18,10 +18,11 @@ export const Dresscode: FunctionComponent = () => {
 					/>
 				</div>
 				<p className={styles.text}>
-					Cely nas svatebni den bude probihat v prirode na louce a ve stodole,
-					proto svuj dresscode prosime prizpusobte tomuto mistu ale i predpovedi
-					pocasi v dany den. Oblecte se hlavne tak, abyste se citili pohodle :)
+					Celý náš svatební den bude probíhat v přírodě na louce a ve stodole,
+					proto své oblečení, prosíme, přizpůsobte tomuto místu a předpovědi
+					počasí.
 				</p>
+				<p className={styles.text}>Oblečte se hlavně pohodlně :)</p>
 			</Container>
 		</div>
 	)
