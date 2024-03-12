@@ -7,6 +7,7 @@ export const Dresscode: FunctionComponent = () => {
 	return (
 		<div className={styles.wrapper}>
 			<Container>
+				<h2 className={styles.title}>Dress code</h2>
 				<div className={styles.image}>
 					<Image
 						className={styles.imageIn}
