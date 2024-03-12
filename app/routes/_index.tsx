@@ -8,6 +8,7 @@ import { Dresscode } from "~/components/Dresscode"
 import { Form } from "~/components/Form"
 import { Gift } from "~/components/Gift"
 import { Hero } from "~/components/Hero"
+import { Map } from "~/components/Map"
 import { OurStory } from "~/components/OurStory"
 import { Parking } from "~/components/Parking"
 import { Schedule } from "~/components/Schedule"
@@ -80,6 +81,9 @@ export default function Index() {
 			</section>
 			<section className={styles.section}>
 				<BarnImage />
+			</section>
+			<section className={clsx(styles.section, styles.is_map)}>
+				<Map />
 			</section>
 			<section className={clsx(styles.section, styles.is_parking)}>
 				<Parking />

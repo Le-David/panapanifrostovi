@@ -28,6 +28,7 @@
 		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
+		"@react-google-maps/api": "^2.19.3",
 		"@remix-run/css-bundle": "^2.6.0",
 		"@remix-run/dev": "^2.6.0",
 		"@remix-run/eslint-config": "^2.6.0",
