@@ -1,43 +1,14 @@
 
 .wrapper
-	//
-
-.is_desktop, .is_mobile
 	display: flex
-	justify-content: center
-	align-items: center
-	gap: 5rem
-
-.is_desktop
-	.initial
-		font-size: 25em
-		font-weight: 700
-
-	@media not all and (min-width: 87.5rem)
-		display: none
-
-.is_mobile
 	flex-direction: column
+	justify-content: center
+	gap: 1.875rem
 	align-items: center
-	gap: 2.5rem
 
-	.content
-		display: flex
-		justify-content: center
-		gap: 5vw
-		align-items: center
-
-	.initial
-		font-size: 15em
-
-	.ampersand
-		font-size: 6em
-
-	@media (min-width: 87.5rem)
-		display: none
+.title
+	font-size: 3.125rem
+	margin-block: 0 1.875rem
 
 .image
 	display: flex
-
-.initial, .ampersand
-	line-height: 1
