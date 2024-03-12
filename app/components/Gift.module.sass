@@ -3,16 +3,28 @@
 .wrapper
 	//
 
+.title
+	margin-block: 0 3.125rem
+	text-align: center
+
 .image
 	display: flex
 	justify-content: center
 	margin-bottom: 3.125rem
+	margin-right: 1.25rem // offset
 
 .text
 	max-width: 37.5rem
 	margin-inline: auto
-	margin-block: 0 3.125rem
+	margin-bottom: 0
+
+	&:not(:first-child)
+		margin-top: 1.25rem
 
 .qr
+	margin-top: 3.125rem
 	display: flex
 	justify-content: center
+
+.thankYou
+	text-align: center

@@ -7,33 +7,35 @@ export const Gift: FunctionComponent = () => {
 	return (
 		<div className={styles.wrapper}>
 			<Container>
+				<h2 className={styles.title}>Dary</h2>
 				<div className={styles.image}>
 					<Image
 						isGoogleDrive
 						imageId="1HdT-0qIUVu_Cg38d-igWKgy6fDJ-IBH1"
-						width={300}
-						height={300}
+						width={220}
+						height={220}
 						alt="Dárek"
 					/>
 				</div>
 				<p className={styles.text}>
-					Budete li nas chtit obdarovat necim dalsim, nez jen svou pritomnosti,
-					budeme radi za financni prispevek :)
+					Budete-li nás chtít obdarovat něčím dalším, než svou přítomností,
+					budeme rádi za finanční příspěvek :)
 				</p>
 				<p className={styles.text}>
-					Tip: Pokud si nechcete lamat hlavu s tim, kde je nejblizsi bankovat
-					ci, jakou obalku zvolit, muzete nam prispet pomoci naseho virtuaoniho
-					prasatka pomoci qr kodu nize. Dekujeme!
+					Tip: Pokud si nechcete lámat hlavu s tím, kde je nejbližší bankovat či
+					jakou obálku zvolit, můžete nam přispět pomocí našeho virtuálního
+					prasátka v podobě QR kódu níže.
 				</p>
 				<div className={styles.qr}>
 					<Image
 						isGoogleDrive
-						imageId="1D4xo2W0QhsEXqZqhTzg8_rNDyWboq31m"
-						width={300}
-						height={300}
+						imageId="1c_0DuOUGwnQ7uFGJLhOFru1wlJzDSqNz"
+						width={250}
+						height={250}
 						alt="QR kód"
 					/>
 				</div>
+				<h3 className={styles.thankYou}>Děkujeme</h3>
 			</Container>
 		</div>
 	)
