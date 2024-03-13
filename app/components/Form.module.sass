@@ -1,7 +1,27 @@
+@use 'common'
+
+=inputStyles
+	width: 100%
+	border-radius: 0.625rem
+	padding: 0.625rem 0.9375rem
+	font-size: 1.125rem
+	font-family: common.$font-body
+	border: 1px solid #59544b
+
+	&::placeholder
+		opacity: 0.4
+
 .wrapper
-	max-width: 31.25rem
-	margin: 0 auto
+	text-align: center
 	padding: 1rem
+
+.main
+	display: flex
+	flex-direction: column
+	gap: 0.9375rem
+	max-width: 37.5rem
+	margin-inline: auto
+	margin-top: 3.125rem
 
 .group
 	width: 100%
@@ -10,16 +30,56 @@
 
 .label
 	flex-basis: 100%
+	&Text
+		text-align: initial
+		font-family: common.$font-body
+		font-size: 1rem
+
+		&.is_bigger
+			font-size: 1.125rem
+
 	&Radio
 		//
+
+	&Checkbox
+		display: flex
+		gap: 0.3125rem
+		align-items: center
+		font-size: 1.25rem
 
 .input
-	width: 100%
+	+inputStyles
+
 	&Radio
 		//
 
+	&Checkbox
+		//
+
+.fieldset
+	border: 1px solid #59544b
+	padding-block: 0 1.25rem
+	display: flex
+	flex-direction: column
+	gap: 0.625rem
+	border-radius: 0.625rem
+
+	.legend
+		display: inline-block
+		margin-bottom: 0.9375rem
+
 .textarea
-	width: 100%
+	+inputStyles
+	padding-block: 0.625rem
+	min-height: 9.375rem
+	resize: vertical
 
 .submit
+	text-align: center
+	width: fit-content
 	display: inline-block
+	padding: 0.5rem 1rem
+	background-color: common.$color-main
+	border: 0
+	border-radius: 0.625rem
+	font-size: 1.25rem

@@ -1,6 +1,7 @@
 import { ActionFunctionArgs, json } from "@remix-run/node"
 import { useLoaderData } from "@remix-run/react"
 import clsx from "clsx"
+import "collapsible-react-component/dist/index.css"
 import { supabase } from "utils/supabase"
 import { BarnImage } from "~/components/BarnImage"
 import { Ceremony } from "~/components/Ceremony"
@@ -35,16 +36,24 @@ export function headers({
 export const action = async ({ request }: ActionFunctionArgs) => {
 	const formData = await request.formData()
 
-	// @TODO: other fields
 	const mutation = await supabase.from("ParticipationSubmission").insert({
 		firstname: formData.get("firstname")?.toString(),
 		lastname: formData.get("lastname")?.toString(),
+		is_participating: formData.get("participation") ? true : false,
+		is_family: formData.get("is_family") ? true : false,
+		participants: formData.get("participants")?.toString(),
+		mobile: formData.get("mobile")?.toString(),
+		note: formData.get("note")?.toString(),
 	})
 
-	// @TODO: handle success/errors
-	console.log("============= Log - start =============")
-	console.log("mutation: ", mutation)
-	console.log("============= Log - end =============")
+	if (mutation.error) {
+		// @TODO: handle errors
+		console.error("Error inserting data: ", mutation.error)
+	}
+
+	if (mutation.status >= 200 && mutation.status <= 299) {
+		// @TODO: handle success
+	}
 
 	// return {
 	// 	...mutation,
@@ -64,10 +73,7 @@ export default function Index() {
 
 	!googleMapsApiKey && console.log("No Google Maps API key provided")
 	return (
-		<main
-			className={styles.wrapper}
-			style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}
-		>
+		<main className={styles.wrapper}>
 			<Hero />
 			<section className={clsx(styles.section, styles.is_story)}>
 				<OurStory />
