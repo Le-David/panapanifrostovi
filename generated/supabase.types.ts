@@ -19,7 +19,7 @@ export type Database = {
           lastname: string
           mobile: string | null
           note: string | null
-          participants: number | null
+          participants: string | null
         }
         Insert: {
           created_at?: string
@@ -30,7 +30,7 @@ export type Database = {
           lastname?: string
           mobile?: string | null
           note?: string | null
-          participants?: number | null
+          participants?: string | null
         }
         Update: {
           created_at?: string
@@ -41,7 +41,7 @@ export type Database = {
           lastname?: string
           mobile?: string | null
           note?: string | null
-          participants?: number | null
+          participants?: string | null
         }
         Relationships: []
       }
