@@ -8,10 +8,14 @@ import {
 import { useCallback, useState, type FunctionComponent } from "react"
 import styles from "./Map.module.css"
 
-export const Map: FunctionComponent = () => {
+type MapProps = {
+	googleMapsApiKey: string
+}
+
+export const Map: FunctionComponent<MapProps> = ({ googleMapsApiKey }) => {
 	const { isLoaded } = useJsApiLoader({
 		id: "google-map-script",
-		googleMapsApiKey: "AIzaSyCAexjPHhCWK6Bf0CFJL_yq_5IQ83djMP4",
+		googleMapsApiKey: googleMapsApiKey || "",
 	})
 	const center = {
 		lat: 48.91423797607422,

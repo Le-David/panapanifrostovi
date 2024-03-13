@@ -1,4 +1,5 @@
-import { ActionFunctionArgs } from "@remix-run/node"
+import { ActionFunctionArgs, json } from "@remix-run/node"
+import { useLoaderData } from "@remix-run/react"
 import clsx from "clsx"
 import { supabase } from "utils/supabase"
 import { BarnImage } from "~/components/BarnImage"
@@ -51,7 +52,17 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 	return null
 }
 
+export const loader = async () => {
+	return json({
+		GOOGLE_API_MAP_KEY: process.env.GOOGLE_API_MAP_KEY,
+	})
+}
+
 export default function Index() {
+	const { GOOGLE_API_MAP_KEY: googleMapsApiKey } =
+		useLoaderData<typeof loader>()
+
+	!googleMapsApiKey && console.log("No Google Maps API key provided")
 	return (
 		<main
 			className={styles.wrapper}
@@ -82,9 +93,11 @@ export default function Index() {
 			<section className={styles.section}>
 				<BarnImage />
 			</section>
-			<section className={clsx(styles.section, styles.is_map)}>
-				<Map />
-			</section>
+			{googleMapsApiKey && (
+				<section className={clsx(styles.section, styles.is_map)}>
+					<Map googleMapsApiKey={googleMapsApiKey ?? ""} />
+				</section>
+			)}
 			<section className={clsx(styles.section, styles.is_parking)}>
 				<Parking />
 			</section>
