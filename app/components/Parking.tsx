@@ -31,7 +31,7 @@ export const Parking: FunctionComponent = () => {
 				<p className={styles.text}>
 					Využít lze například ubytovací zařízení v nedaleké Lenoře, případně
 					můžete u stodoly rozložit stany, zaparkovat karavany nebo si užít
-					spaní pod širákem - necháme na vás :)
+					spaní pod širákem - necháme na vás 🚐
 				</p>
 			</Container>
 		</div>

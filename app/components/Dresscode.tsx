@@ -23,7 +23,7 @@ export const Dresscode: FunctionComponent = () => {
 					proto své oblečení, prosíme, přizpůsobte tomuto místu a předpovědi
 					počasí.
 				</p>
-				<p className={styles.text}>Oblečte se hlavně pohodlně :)</p>
+				<p className={styles.text}>Oblečte se hlavně pohodlně 👗</p>
 			</Container>
 		</div>
 	)

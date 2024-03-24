@@ -19,7 +19,7 @@ export const Gift: FunctionComponent = () => {
 				</div>
 				<p className={styles.text}>
 					Budete-li nás chtít obdarovat něčím dalším, než svou přítomností,
-					budeme rádi za finanční příspěvek :)
+					budeme rádi za finanční příspěvek 🎁
 				</p>
 				<p className={styles.text}>
 					Tip: Pokud si nechcete lámat hlavu s tím, kde je nejbližší bankovat či
