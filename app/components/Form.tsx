@@ -1,7 +1,7 @@
 import { Form as FormComponent } from "@remix-run/react"
 import clsx from "clsx"
 import { Collapsible } from "collapsible-react-component"
-import { useState, type FunctionComponent } from "react"
+import { type FunctionComponent, useState } from "react"
 import styles from "./Form.module.css"
 
 // export type FormProps = {}
@@ -78,15 +78,6 @@ export const Form: FunctionComponent = () => {
 						</span>
 					</label>
 				</fieldset>
-				<label className={styles.labelCheckbox}>
-					<input
-						className={styles.inputCheckbox}
-						type="checkbox"
-						name="is_family"
-						onChange={(event) => setIsFamily(event.target.checked)}
-					/>
-					Přijedete jako rodinka?
-				</label>
 				<Collapsible open={isFamily}>
 					<label className={styles.label}>
 						<div className={styles.labelText}>Kolik vás bude?</div>
