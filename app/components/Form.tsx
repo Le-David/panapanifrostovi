@@ -1,13 +1,11 @@
 import { Form as FormComponent } from "@remix-run/react"
 import clsx from "clsx"
-import { Collapsible } from "collapsible-react-component"
-import { type FunctionComponent, useState } from "react"
+import type { FunctionComponent } from "react"
 import styles from "./Form.module.css"
 
 // export type FormProps = {}
 
 export const Form: FunctionComponent = () => {
-	const [isFamily, setIsFamily] = useState(false)
 	return (
 		<FormComponent className={styles.wrapper} method="post">
 			<h2>
@@ -78,18 +76,6 @@ export const Form: FunctionComponent = () => {
 						</span>
 					</label>
 				</fieldset>
-				<Collapsible open={isFamily}>
-					<label className={styles.label}>
-						<div className={styles.labelText}>Kolik vás bude?</div>
-						<input
-							className={styles.input}
-							type="number"
-							name="participants"
-							min={1}
-							defaultValue={1}
-						/>
-					</label>
-				</Collapsible>
 				<label className={styles.label}>
 					<div className={styles.labelText}>Pole pro dotazy</div>
 					<textarea
