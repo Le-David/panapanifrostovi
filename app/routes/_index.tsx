@@ -3,7 +3,7 @@ import { useLoaderData } from "@remix-run/react"
 import clsx from "clsx"
 import "collapsible-react-component/dist/index.css"
 import { supabase } from "utils/supabase"
-import { BarnImage } from "~/components/BarnImage"
+import { BackgroundImage } from "~/components/BackgroundImage"
 import { Ceremony } from "~/components/Ceremony"
 import { Container } from "~/components/Container"
 import { Dresscode } from "~/components/Dresscode"
@@ -82,7 +82,7 @@ export default function Index() {
 				<Ceremony />
 			</section>
 			<section className={styles.section}>
-				<BarnImage />
+				<BackgroundImage />
 			</section>
 			<section className={clsx(styles.section, styles.is_info)}>
 				<Container>
@@ -97,7 +97,7 @@ export default function Index() {
 				<Schedule />
 			</section>
 			<section className={styles.section}>
-				<BarnImage />
+				<BackgroundImage type="second" />
 			</section>
 			{googleMapsApiKey && (
 				<section className={clsx(styles.section, styles.is_map)}>
