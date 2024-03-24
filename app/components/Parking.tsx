@@ -7,7 +7,7 @@ export const Parking: FunctionComponent = () => {
 	return (
 		<div className={styles.wrapper}>
 			<Container>
-				<h2 className={styles.title}>Parkování</h2>
+				<h2 className={styles.title}>Parkování a nocleh</h2>
 				<div className={styles.image}>
 					{/* @TODO: add animation that car is coming from left when intersecting */}
 					<Image
