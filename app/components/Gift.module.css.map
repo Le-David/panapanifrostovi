@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["Gift.module.sass","../styles/variables.sass"],"names":[],"mappings":"AAEA,SACC,iBCDmB,QDEnB,cCGoB,KDDrB,OACC,wBACA,kBAED,OACC,aACA,uBACA,uBACA,qBAED,MACC,kBACA,mBACA,gBAEA,wBACC,mBAEF,IACC,oBACA,aACA,uBAED,UACC","file":"Gift.module.css"}
+{"version":3,"sourceRoot":"","sources":["Gift.module.sass","../styles/variables.sass"],"names":[],"mappings":"AAEA,SACC,iBCDmB,QDEnB,cCGoB,KDDrB,OACC,wBACA,mBACA,kBAED,OACC,aACA,uBACA,uBACA,qBAED,MACC,kBACA,mBACA,gBACA,kBAEA,wBACC,mBAEF,IACC,oBACA,aACA,uBAED,UACC","file":"Gift.module.css"}
