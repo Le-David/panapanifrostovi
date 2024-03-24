@@ -26,10 +26,15 @@
 .group
 	width: 100%
 	display: flex
+	flex-direction: column
 	gap: 1.25rem
+
+	@media (min-width: 30rem)
+		flex-direction: row
 
 .label
 	flex-basis: 100%
+
 	&Text
 		text-align: initial
 		font-family: common.$font-body
@@ -46,7 +51,7 @@
 		display: flex
 		gap: 0.3125rem
 		align-items: center
-		font-size: 1.25rem
+		font-size: 1.5rem
 
 .input
 	+inputStyles
@@ -83,4 +88,4 @@
 	background-color: common.$color-main
 	border: 0
 	border-radius: 0.625rem
-	font-size: 1.25rem
+	font-size: 1.5rem
