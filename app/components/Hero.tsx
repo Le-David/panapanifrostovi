@@ -18,7 +18,7 @@ export const Hero: FunctionComponent = () => {
 			</div>
 			<div className={styles.content}>
 				<h1 className={styles.title}>Vítejte na našem svatebním webu</h1>
-				<h2>#novotnajemrazena</h2>
+				<p className={styles.hashtag}>#novotnajemrazena</p>
 			</div>
 		</div>
 	)
