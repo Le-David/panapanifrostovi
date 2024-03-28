@@ -22,8 +22,8 @@ export const Gift: FunctionComponent = () => {
 					budeme rádi za finanční příspěvek 🎁
 				</p>
 				<p className={styles.text}>
-					Tip: Pokud si nechcete lámat hlavu s tím, kde je nejbližší bankovat či
-					jakou obálku zvolit, můžete nam přispět pomocí našeho virtuálního
+					Tip: Pokud si nechcete lámat hlavu s tím, kde je nejbližší bankomat či
+					jakou obálku zvolit, můžete nám přispět pomocí našeho virtuálního
 					prasátka v podobě QR kódu níže.
 				</p>
 				<div className={styles.qr}>
