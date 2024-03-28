@@ -4,6 +4,7 @@ import {
 	FormEventHandler,
 	useCallback,
 	useEffect,
+	useRef,
 	useState,
 	type FunctionComponent,
 } from "react"
@@ -15,6 +16,7 @@ import styles from "./Form.module.css"
 
 export const Form: FunctionComponent = () => {
 	const data = useActionData<typeof action>()
+	const formRef = useRef<HTMLFormElement>(null)
 	const [isSubmitting, setIsSubmitting] = useState(false)
 	const handleSubmit = useCallback<FormEventHandler<HTMLFormElement>>(() => {
 		setIsSubmitting(true)
@@ -27,6 +29,7 @@ export const Form: FunctionComponent = () => {
 
 		if (data && data.status >= 200 && data?.status <= 299) {
 			toast.success("Formulář se úspěšně odeslal, díky!")
+			formRef.current?.reset()
 		}
 
 		if ((data && data?.status >= 400 && data?.status <= 500) || data?.error) {
@@ -40,6 +43,7 @@ export const Form: FunctionComponent = () => {
 			className={styles.wrapper}
 			method="post"
 			onSubmit={handleSubmit}
+			ref={formRef}
 		>
 			<h2>
 				A to nejdůležitější na konec?
