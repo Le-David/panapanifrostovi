@@ -25,8 +25,8 @@ export const Parking: FunctionComponent = () => {
 					přejíždět, jelikož celý den budeme oslavovat na jednom místě.
 				</p>
 				<p className={styles.text}>
-					Ubytování z kapacitních důvodu dokážeme nabídnout pouze nejbližší
-					rodině, proto prosíme o pochopení a přizpůsobeni se této situaci.
+					Ubytování z kapacitních důvodů dokážeme nabídnout pouze nejbližší
+					rodině, proto prosíme o pochopení a přizpůsobení se této situaci.
 				</p>
 				<p className={styles.text}>
 					Využít lze například ubytovací zařízení v nedaleké Lenoře, případně
