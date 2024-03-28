@@ -9,8 +9,8 @@ export const Hero: FunctionComponent = () => {
 				<Image
 					className={styles.image}
 					isGoogleDrive
-					imageId="1c0nGIAMB6UT3kc-xVULwTkVSPDk9Yx4N"
-					width={1800}
+					imageId="1CtUBNaXKwsBPqKjoqlPF2933Lnv2gbob"
+					width={1161}
 					height={810}
 					fill
 					alt="Pan a paní Frostovi"
