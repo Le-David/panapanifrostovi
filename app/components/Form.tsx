@@ -1,13 +1,46 @@
-import { Form as FormComponent } from "@remix-run/react"
+import { Form as FormComponent, useActionData } from "@remix-run/react"
 import clsx from "clsx"
-import type { FunctionComponent } from "react"
+import {
+	FormEventHandler,
+	useCallback,
+	useEffect,
+	useState,
+	type FunctionComponent,
+} from "react"
+import { toast } from "react-toastify"
+import { action } from "~/routes/_index"
 import styles from "./Form.module.css"
 
 // export type FormProps = {}
 
 export const Form: FunctionComponent = () => {
+	const data = useActionData<typeof action>()
+	const [isSubmitting, setIsSubmitting] = useState(false)
+	const handleSubmit = useCallback<FormEventHandler<HTMLFormElement>>(() => {
+		setIsSubmitting(true)
+	}, [])
+
+	useEffect(() => {
+		if (data) {
+			setIsSubmitting(false)
+		}
+
+		if (data && data.status >= 200 && data?.status <= 299) {
+			toast.success("Formulář se úspěšně odeslal, díky!")
+		}
+
+		if ((data && data?.status >= 400 && data?.status <= 500) || data?.error) {
+			toast.error(
+				"Něco se nepovedlo, zkuste obnovit stránku a odeslat formulář znovu!"
+			)
+		}
+	}, [data])
 	return (
-		<FormComponent className={styles.wrapper} method="post">
+		<FormComponent
+			className={styles.wrapper}
+			method="post"
+			onSubmit={handleSubmit}
+		>
 			<h2>
 				A to nejdůležitější na konec?
 				<br />
@@ -84,7 +117,11 @@ export const Form: FunctionComponent = () => {
 						placeholder="Napište nám - prostor pro jakékoliv dotazy"
 					/>
 				</label>
-				<button className={styles.submit} type="submit">
+				<button
+					className={clsx(styles.submit, isSubmitting && styles.is_submitting)}
+					disabled={isSubmitting}
+					type="submit"
+				>
 					Odeslat
 				</button>
 			</div>

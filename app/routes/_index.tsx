@@ -2,6 +2,8 @@ import { ActionFunctionArgs, json } from "@remix-run/node"
 import { useLoaderData } from "@remix-run/react"
 import clsx from "clsx"
 import "collapsible-react-component/dist/index.css"
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 import { supabase } from "utils/supabase"
 import { BackgroundImage } from "~/components/BackgroundImage"
 import { Ceremony } from "~/components/Ceremony"
@@ -40,25 +42,13 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 		firstname: formData.get("firstname")?.toString(),
 		lastname: formData.get("lastname")?.toString(),
 		is_participating: formData.get("participation") ? true : false,
-		is_family: formData.get("is_family") ? true : false,
-		participants: formData.get("participants")?.toString(),
 		mobile: formData.get("mobile")?.toString(),
 		note: formData.get("note")?.toString(),
 	})
 
-	if (mutation.error) {
-		// @TODO: handle errors
-		console.error("Error inserting data: ", mutation.error)
+	return {
+		...mutation,
 	}
-
-	if (mutation.status >= 200 && mutation.status <= 299) {
-		// @TODO: handle success
-	}
-
-	// return {
-	// 	...mutation,
-	// }
-	return null
 }
 
 export const loader = async () => {
@@ -116,6 +106,7 @@ export default function Index() {
 			<section className={styles.section}>
 				<Form />
 			</section>
+			<ToastContainer position="top-center" theme="colored" />
 		</main>
 	)
 }
