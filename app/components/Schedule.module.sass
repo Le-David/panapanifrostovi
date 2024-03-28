@@ -8,11 +8,34 @@
 	margin-block: 0 3.125rem
 
 .schedule
-	text-align: center
+	margin-inline: auto
+	width: fit-content
 
 	&Item
+		$horizontalOffset: 10vh
+		display: flex
+		flex-direction: column
+		text-align: center
+
+		&:nth-child(2n)
+			transform: translateX($horizontalOffset)
+
+		&:nth-child(2n + 1)
+			transform: translateX(-$horizontalOffset)
+
 		&:not(:first-child)
 			margin-top: 5rem
+
+		@media (prefers-reduced-motion: no-preference)
+			opacity: 0
+			visibility: hidden
+			transition-property: transform, opacity, visibility
+			transition-duration: 0.6s
+
+			&.is_inView
+				opacity: 1
+				visibility: initial
+				transform: translateX(0)
 
 		&Title
 			font-size: 1.5625rem

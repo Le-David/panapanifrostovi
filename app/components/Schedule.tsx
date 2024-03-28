@@ -1,4 +1,6 @@
-import type { FunctionComponent } from "react"
+import clsx from "clsx"
+import type { FunctionComponent, ReactNode } from "react"
+import { useInView } from "react-intersection-observer"
 import { Container } from "./Container"
 import styles from "./Schedule.module.css"
 
@@ -9,7 +11,7 @@ export const Schedule: FunctionComponent = () => {
 			<Container>
 				<h2 className={styles.title}>Program celého dne</h2>
 				<div className={styles.schedule}>
-					<div className={styles.scheduleItem}>
+					<ScheduleItem>
 						<div className={styles.scheduleItemIcon}>
 							<svg
 								className={styles.scheduleItemIconIn}
@@ -33,8 +35,8 @@ export const Schedule: FunctionComponent = () => {
 						</div>
 						<h3 className={styles.scheduleItemTitle}>12:30</h3>
 						<h4 className={styles.scheduleItemDescription}>Svatební obřad</h4>
-					</div>
-					<div className={styles.scheduleItem}>
+					</ScheduleItem>
+					<ScheduleItem>
 						<div className={styles.scheduleItemIcon}>
 							<svg
 								className={styles.scheduleItemIconIn}
@@ -52,8 +54,8 @@ export const Schedule: FunctionComponent = () => {
 						</div>
 						<h3 className={styles.scheduleItemTitle}>13:00</h3>
 						<h4 className={styles.scheduleItemDescription}>Společné focení</h4>
-					</div>
-					<div className={styles.scheduleItem}>
+					</ScheduleItem>
+					<ScheduleItem>
 						<div className={styles.scheduleItemIcon}>
 							<svg
 								className={styles.scheduleItemIconIn}
@@ -68,8 +70,8 @@ export const Schedule: FunctionComponent = () => {
 						</div>
 						<h3 className={styles.scheduleItemTitle}>14:00</h3>
 						<h4 className={styles.scheduleItemDescription}>Svatební oběd</h4>
-					</div>
-					<div className={styles.scheduleItem}>
+					</ScheduleItem>
+					<ScheduleItem>
 						<div className={styles.scheduleItemIcon}>
 							<svg
 								className={styles.scheduleItemIconIn}
@@ -83,8 +85,8 @@ export const Schedule: FunctionComponent = () => {
 						</div>
 						<h3 className={styles.scheduleItemTitle}>15:30</h3>
 						<h4 className={styles.scheduleItemDescription}>Krájení dortu</h4>
-					</div>
-					<div className={styles.scheduleItem}>
+					</ScheduleItem>
+					<ScheduleItem>
 						<div className={styles.scheduleItemIcon}>
 							<svg
 								className={styles.scheduleItemIconIn}
@@ -180,8 +182,8 @@ export const Schedule: FunctionComponent = () => {
 						<h4 className={styles.scheduleItemDescription}>
 							Novomanželský tanec
 						</h4>
-					</div>
-					<div className={styles.scheduleItem}>
+					</ScheduleItem>
+					<ScheduleItem>
 						<div className={styles.scheduleItemIcon}>
 							<svg
 								className={styles.scheduleItemIconIn}
@@ -248,8 +250,8 @@ export const Schedule: FunctionComponent = () => {
 						</div>
 						<h3 className={styles.scheduleItemTitle}>18:00</h3>
 						<h4 className={styles.scheduleItemDescription}>Raut</h4>
-					</div>
-					<div className={styles.scheduleItem}>
+					</ScheduleItem>
+					<ScheduleItem>
 						<div className={styles.scheduleItemIcon}>
 							<svg
 								className={styles.scheduleItemIconIn}
@@ -265,9 +267,23 @@ export const Schedule: FunctionComponent = () => {
 						</div>
 						<h3 className={styles.scheduleItemTitle}>19:00</h3>
 						<h4 className={styles.scheduleItemDescription}>Volná zábava</h4>
-					</div>
+					</ScheduleItem>
 				</div>
 			</Container>
+		</div>
+	)
+}
+
+const ScheduleItem: FunctionComponent<{ children: ReactNode }> = ({
+	children,
+}) => {
+	const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 })
+	return (
+		<div
+			className={clsx(styles.scheduleItem, inView && styles.is_inView)}
+			ref={ref}
+		>
+			{children}
 		</div>
 	)
 }
