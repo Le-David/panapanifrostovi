@@ -19,7 +19,9 @@ export const Ceremony: FunctionComponent = () => {
 						</svg>
 					</div>
 					<p className={styles.text}>
-						Svatba se bude konat 20. července 2024
+						Svatba se bude konat
+						<br />
+						20. července 2024
 						<br />v Hajnýho Stodole
 						<br />
 						České Žleby 52, Lenora
