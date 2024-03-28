@@ -1,14 +1,20 @@
+import clsx from "clsx"
 import type { FunctionComponent } from "react"
+import { useInView } from "react-intersection-observer"
 import { Container } from "./Container"
 import styles from "./Gift.module.css"
 import { Image } from "./Image"
 
 export const Gift: FunctionComponent = () => {
+	const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 })
 	return (
 		<div className={styles.wrapper}>
 			<Container>
 				<h2 className={styles.title}>Dary</h2>
-				<div className={styles.image}>
+				<div
+					className={clsx(styles.image, inView && styles.is_inView)}
+					ref={ref}
+				>
 					<Image
 						isGoogleDrive
 						imageId="1HdT-0qIUVu_Cg38d-igWKgy6fDJ-IBH1"

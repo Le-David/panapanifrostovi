@@ -15,6 +15,18 @@
 	margin-bottom: 3.125rem
 	margin-right: 1.25rem // offset
 
+	@media (prefers-reduced-motion: no-preference)
+		opacity: 0
+		visibility: hidden
+		transition-property: transform, opacity, visibility
+		transition-duration: 1.5s
+		transform: scale(1.1)
+
+		&.is_inView
+			opacity: 1
+			visibility: initial
+			transform: scale(1)
+
 .text
 	max-width: 37.5rem
 	margin-inline: auto
