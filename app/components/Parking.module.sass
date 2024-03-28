@@ -14,6 +14,18 @@
 	justify-content: center
 	margin-bottom: 3.125rem
 
+	@media (prefers-reduced-motion: no-preference)
+		opacity: 0
+		visibility: hidden
+		transform: translateX(-20vh)
+		transition-property: transform, opacity, visibility
+		transition-duration: 1.5s
+
+		&.is_inView
+			opacity: 1
+			visibility: initial
+			transform: translateX(0)
+
 	&In
 		//
 

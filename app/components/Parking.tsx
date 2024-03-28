@@ -1,14 +1,23 @@
+import clsx from "clsx"
 import type { FunctionComponent } from "react"
+import { useInView } from "react-intersection-observer"
 import { Container } from "~/components/Container"
 import { Image } from "~/components/Image"
 import styles from "./Parking.module.css"
 
 export const Parking: FunctionComponent = () => {
+	const { ref, inView } = useInView({
+		triggerOnce: true,
+		threshold: 0.5,
+	})
 	return (
 		<div className={styles.wrapper}>
 			<Container>
 				<h2 className={styles.title}>Parkování a nocleh</h2>
-				<div className={styles.image}>
+				<div
+					className={clsx(styles.image, inView && styles.is_inView)}
+					ref={ref}
+				>
 					{/* @TODO: add animation that car is coming from left when intersecting */}
 					<Image
 						className={styles.imageIn}
