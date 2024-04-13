@@ -1,8 +1,35 @@
-import { useLoaderData } from "@remix-run/react"
+import { MetaFunction, useLoaderData } from "@remix-run/react"
 import clsx from "clsx"
 import { useCallback } from "react"
 import { supabase } from "utils/supabase"
 import styles from "../styles/routes/very-secret-page.module.css"
+
+export const meta: MetaFunction = () => {
+  return [
+    {
+      name: "robots",
+      content: "noindex, nofollow",
+    },
+  ];
+};
+
+
+export function headers({
+	loaderHeaders,
+	parentHeaders,
+}: {
+	loaderHeaders: Headers
+	parentHeaders: Headers
+}) {
+	console.log(
+		"This is an example of how to set caching headers for a route, feel free to change the value of 60 seconds or remove the header"
+	)
+	return {
+		// This is an example of how to set caching headers for a route
+		// For more info on headers in Remix, see: https://remix.run/docs/en/v1/route/headers
+		"Cache-Control": "public, max-age=60, s-maxage=60",
+	}
+}
 
 export const loader = async () => {
 	const { data } = await supabase.from("ParticipationSubmission").select()
