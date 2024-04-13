@@ -10,6 +10,9 @@ export const meta: MetaFunction = () => {
       name: "robots",
       content: "noindex, nofollow",
     },
+		{
+			charset: 'UTF-8'
+		}
   ];
 };
 
