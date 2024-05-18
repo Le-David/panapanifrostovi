@@ -76,10 +76,10 @@ export default function Index() {
 			</section>
 			<section className={clsx(styles.section, styles.is_info)}>
 				<Container>
-					<p className={styles.infoText}>Obřad proběhne ve 12:30 hodin</p>
+					<p className={styles.infoText}>Obřad proběhne ve 12:00 hodin</p>
 					<p className={styles.infoText}>
 						Prosíme o příjezd svatebčanů zhruba mezi <br />
-						11:30 - 12:00
+						11:00 - 11:30
 					</p>
 				</Container>
 			</section>

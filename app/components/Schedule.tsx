@@ -33,7 +33,7 @@ export const Schedule: FunctionComponent = () => {
 								/>
 							</svg>
 						</div>
-						<h3 className={styles.scheduleItemTitle}>12:30</h3>
+						<h3 className={styles.scheduleItemTitle}>12:00</h3>
 						<h4 className={styles.scheduleItemDescription}>Svatební obřad</h4>
 					</ScheduleItem>
 					<ScheduleItem>
